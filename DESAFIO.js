@@ -38,4 +38,4 @@ function buscarFilmes(genero, criterio) {
     .map(filme => filme.titulo + " (" + filme.ano + ") - " + filme.genero);
 }
 
-console.log(buscarFilmes("ficção", "ano"));
+console.log(buscarFilmes("fantasia", "ano"));
