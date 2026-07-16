@@ -35,13 +35,23 @@ function App() {
     );
   }
 
+  const handleDeleteNotice = (id) => {
+    setNotices(prevNotices =>
+      prevNotices.filter(notice => notice.id !== id)
+    );
+  };
+
   return (
     <>
       <Header
         title={"Programação para Internet"}
         subtitle={"Curso Técnico Integrado em Informática"}
       />
-      <NoticeList notices={notices} onToggleFeatured={handleToggleFeatured} />
+      <NoticeList 
+        notices={notices} 
+        onToggleFeatured={handleToggleFeatured}
+        onDeleteNotice={handleDeleteNotice}
+      />
     </>
   );
 }
